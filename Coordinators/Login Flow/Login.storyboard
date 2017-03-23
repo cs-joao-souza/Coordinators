@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="FN6-au-mdO">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="Ld0-Fo-OTb" customClass="LoginViewController" customModule="Coordinators" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ton-1s-Lky"/>
+                        <viewControllerLayoutGuide type="bottom" id="5dg-8p-4Z6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vAj-RI-C1Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV1-LO-7L6">
+                                <rect key="frame" x="20" y="527" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.81739536537362945" green="1" blue="0.47155582704376231" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rP3-t5-uT5"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsn-yL-sDB">
+                                <rect key="frame" x="135" y="602" width="104" height="30"/>
+                                <state key="normal" title="Termos de Uso"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gsn-yL-sDB" firstAttribute="top" secondItem="tV1-LO-7L6" secondAttribute="bottom" constant="35" id="V72-WI-IBZ"/>
+                            <constraint firstItem="5dg-8p-4Z6" firstAttribute="top" secondItem="Gsn-yL-sDB" secondAttribute="bottom" constant="35" id="Zl0-l4-zbP"/>
+                            <constraint firstAttribute="trailing" secondItem="tV1-LO-7L6" secondAttribute="trailing" constant="20" id="agb-g9-VGb"/>
+                            <constraint firstItem="tV1-LO-7L6" firstAttribute="leading" secondItem="vAj-RI-C1Z" secondAttribute="leading" constant="20" id="jMD-N2-q3q"/>
+                            <constraint firstItem="Gsn-yL-sDB" firstAttribute="centerX" secondItem="vAj-RI-C1Z" secondAttribute="centerX" id="yZg-U9-Dpw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIu-rB-ggj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-724" y="71"/>
+        </scene>
+    </scenes>
+</document>
