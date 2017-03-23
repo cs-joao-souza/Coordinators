@@ -8,6 +8,8 @@
 
 import UIKit
 
-class UIViewControllerExtension: NSObject {
-
+extension UIViewController {
+  func hideNavigationItemBackButton() {
+    self.navigationItem.hidesBackButton = true
+  }
 }

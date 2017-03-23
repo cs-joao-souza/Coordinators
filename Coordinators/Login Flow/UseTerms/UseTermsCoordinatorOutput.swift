@@ -8,6 +8,6 @@
 
 import UIKit
 
-class UseTermsCoordinatorOutput: NSObject {
-
+protocol UseTermsCoordinatorOutput {
+  var finishModule: ( () -> () )? { get set }
 }

@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ContentViewControllerDelegate: NSObject {
-
+protocol ContentViewControllerDelegate {
+  func didLogout()
 }

@@ -7,7 +7,12 @@
 //
 
 import UIKit
+@testable import Coordinators
 
 class ContentViewControllerDelegateMock: ContentViewControllerDelegate {
-
+  var didLogoutWasCalled = false
+  
+  func didLogout() {
+    didLogoutWasCalled = true
+  }
 }

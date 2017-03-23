@@ -7,7 +7,12 @@
 //
 
 import UIKit
+@testable import Coordinators
 
 class UseTermsViewControllerDelegateMock: UseTermsViewControllerDelegate {
-
+  var didCloseWasCalled = false
+  
+  func didClose() {
+    didCloseWasCalled = true
+  }
 }

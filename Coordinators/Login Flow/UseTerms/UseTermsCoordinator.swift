@@ -8,6 +8,32 @@
 
 import UIKit
 
-class UseTermsCoordinator: Coordinator {
+class UseTermsCoordinator: Coordinator, UseTermsCoordinatorOutput {
+  
+  var finishModule: (() -> ())?
+  
+  var rootViewController: UINavigationController
+  
+  init(rootViewController: UINavigationController) {
+    self.rootViewController = rootViewController
+  }
+  
+  func start() {
+    showUseTerms()
+  }
+  
+  func showUseTerms() {
+    let useTermsViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "UseTermsViewController") as! UseTermsViewController
+    useTermsViewController.delegate = self
+    let navigationController = UINavigationController(rootViewController: useTermsViewController)
+    self.rootViewController.present(navigationController, animated: true, completion: nil)        
+  }
+}
 
+extension UseTermsCoordinator: UseTermsViewControllerDelegate {
+  func didClose() {
+    if let finishModule = self.finishModule?() {
+      finishModule
+    }
+  }
 }

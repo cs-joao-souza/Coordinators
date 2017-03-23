@@ -8,6 +8,7 @@
 
 import UIKit
 
-class LoginViewControllerDelegate: NSObject {
-
+protocol LoginViewControllerDelegate {
+  func didLogin(user: User)
+  func didPressedUseTerms()
 }

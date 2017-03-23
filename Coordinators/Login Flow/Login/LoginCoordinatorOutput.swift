@@ -8,6 +8,6 @@
 
 import UIKit
 
-class LoginCoordinatorOutput: NSObject {
-
+protocol LoginCoordinatorOutput {
+  var finishModule: ( (User) -> () )? { get set }
 }

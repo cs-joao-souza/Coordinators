@@ -74,7 +74,49 @@ class AppCoordinatorSpec: QuickSpec {
         it("Should contentCoordinator have a finishModule") {
           expect(sut.contentCoordinator.finishModule).toNot(beNil())
         }
+      }
+      
+      context("When showContent is called") {
+        beforeEach {
+          sut.showContent()
+        }
         
+        it("Should set loginCoordinator to nil") {
+          expect(sut.loginCoordinator).to(beNil())
+        }
+        
+        it("Should have a ContentViewController as first viewcontroller in RootViewController") {
+          expect(sut.rootViewController.viewControllers.first?.isKind(of: ContentViewController.self)).toEventually(beTrue(), timeout: 2)
+        }
+        
+        it("Should have ContentCoordinator not nil") {
+          expect(sut.contentCoordinator).toNot(beNil())
+        }
+        
+        it("Should contentCoordinator have a finishModule") {
+          expect(sut.contentCoordinator.finishModule).toNot(beNil())
+        }
+      }
+      
+      context("When contentCoordinator finishModule isCalled") {
+        beforeEach {
+          sut.showContent()
+          sut.contentCoordinator.finishModule!()
+        }
+        
+        
+        it("Should have a LoginViewController as first viewcontroller in RootViewController") {
+          expect(sut.rootViewController.viewControllers.first?.isKind(of: LoginViewController.self)).toEventually(beTrue(), timeout: 2)
+        }
+        
+        it("Should have LoginCoordinator not nil") {
+          expect(sut.loginCoordinator).toNot(beNil())
+        }
+        
+        it("Should loginCoordinator has a finishModule") {
+          expect(sut.loginCoordinator.finishModule).toNot(beNil())
+        }
+
       }
     }
   }

@@ -14,10 +14,10 @@ class LoginViewControllerDelegateMock: LoginViewControllerDelegate {
   var didPressedUseTermsCalled = false
   
   func didLogin(user: User) {
-    
+    didLogginWasCalled = true
   }
   
   func didPressedUseTerms() {
-    
+   didPressedUseTermsCalled = true
   }
 }

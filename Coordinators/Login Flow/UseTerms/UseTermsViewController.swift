@@ -10,26 +10,27 @@ import UIKit
 
 class UseTermsViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  var delegate: UseTermsViewControllerDelegate?
+  
+  // MARK: Lifecycle
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    self.title = "Termos de Uso"
+    createCloseButton()
+  }
+  
+  // MARK: Private
+  
+  private func createCloseButton() {
+    let closeBarButtonItem = UIBarButtonItem(title: "Fechar", style: .plain, target: self, action: #selector(UseTermsViewController.close(sender:)))
+    self.navigationItem.rightBarButtonItem = closeBarButtonItem    
+  }
+  
+  // MARK: Public
+  
+  func close(sender: UIBarButtonItem) {
+    self.dismiss(animated: true, completion: nil)
+    self.delegate?.didClose()
+  }
 }

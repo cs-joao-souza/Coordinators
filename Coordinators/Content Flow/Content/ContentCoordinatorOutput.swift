@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ContentCoordinatorOutput: NSObject {
-
+protocol ContentCoordinatorOutput {
+  var finishModule: ( () -> () )? { get set }
 }

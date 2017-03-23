@@ -8,6 +8,6 @@
 
 import UIKit
 
-class UseTermsViewControllerDelegate: NSObject {
-
+protocol UseTermsViewControllerDelegate {
+  func didClose()
 }

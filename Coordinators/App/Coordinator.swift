@@ -8,6 +8,7 @@
 
 import UIKit
 
-class Coordinator: NSObject {
-
+protocol Coordinator: class {
+  var rootViewController: UINavigationController { get set }
+  func start()
 }
