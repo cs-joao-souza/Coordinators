@@ -6,7 +6,7 @@ Feel free to criticize and send me some improvements.
 
 ## Thanks To
 
-http://khanlou.com/2015/10/coordinators-redux/
+http://khanlou.com/2015/10/coordinators-redux/<br/>
 http://iamsim.me/the-coordinator-pattern/
 
 ## License
